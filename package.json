@@ -1,0 +1,36 @@
+{
+  "name": "automated-phone-appointment",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "test": "node_modules/.bin/mocha ./**/*.spec.js --exit"
+  },
+  "keywords": [
+    "twilio",
+    "express",
+    "survey"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "bluebird": "^3.5.5",
+    "body-parser": "^1.19.0",
+    "dotenv-safe": "^8.2.0",
+    "express": "^4.17.1",
+    "mongoose": "5.6.11",
+    "morgan": "^1.9.1",
+    "npm-check-updates": "^3.1.21",
+    "tracer": "^1.0.1",
+    "twilio": "3.33.4"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "lodash": "^4.17.15",
+    "mocha": "^6.2.0",
+    "supertest": "^4.0.2",
+    "supertest-promised": "^1.0.0",
+    "xmldom": "^0.1.27",
+    "xpath": "0.0.27"
+  }
+}
