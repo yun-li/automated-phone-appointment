@@ -22,7 +22,7 @@ exports.interview = async function (request, response) {
       survey: survey,
       appointments: appointments,
     },
-    (err, surveyResponse, questionIndex, prompt='') => {
+    (err, surveyResponse, questionIndex, prompt = "") => {
       const question = survey[questionIndex];
 
       if (err || !surveyResponse) {
@@ -32,20 +32,22 @@ exports.interview = async function (request, response) {
 
       // If question is null, we're done!
       if (!question) {
-        twiml.say("You will receive a short message confirmation. Thank you for taking this survey. Goodbye!");
+        twiml.say(
+          "You will receive a short message confirmation. Thank you for taking this survey. Goodbye!"
+        );
         return respond();
       }
 
       // Add a greeting if this is the first question
       if (questionIndex === 0) {
         twiml.say(
-          "Thank you for taking our survey. Please listen carefully " +
+          "Thank you for calling. We need to collect some information. Please listen carefully " +
             "to the following questions."
         );
       }
 
-      if(prompt) {
-        twiml.say( prompt);
+      if (prompt) {
+        twiml.say(prompt);
       }
 
       // Otherwise, ask the next question
